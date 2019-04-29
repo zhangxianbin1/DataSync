@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
 using System.Data;
-using System.Data.OracleClient;
-using System.Data;
-using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+using Oracle.ManagedDataAccess.Client;
 
 namespace DataSync.Common
 {
@@ -31,7 +28,6 @@ namespace DataSync.Common
                 adapter.SelectCommand = cmm;
                 ds = new DataSet();
                 adapter.Fill(ds);
-                return ds;
             }
             catch (Exception ex)
             {

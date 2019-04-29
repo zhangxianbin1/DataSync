@@ -109,22 +109,22 @@ namespace DataSync
         }
         public static void execute()
         {
-            cesmysql();
+            //cesmysql();
             cesoracle();
-            cessql();
+            //cessql();
         }
         public static void cesmysql()
         {
             try
             {
-                string sql = "select * from dic_ces";
+                string sql = "select * from ces";
                 DataSet ds = MySqlHelper.SqlByAdo(sql);
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
                     Console.WriteLine("query success");
                     log.Info("query success");
                 }
-                sql = "insert into dic_ces(code,cname,parent,valid)values(2,'测试',1,1)";
+                sql = "insert into ces(code,cname,parent,valid)values(2,'测试',1,1)";
                 int result = MySqlHelper.ExcuteSQL(sql);
                 if (result > 0)
                 {
