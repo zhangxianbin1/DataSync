@@ -110,8 +110,8 @@ namespace DataSync
         public static void execute()
         {
             //cesmysql();
-            cesoracle();
-            //cessql();
+            //cesoracle();
+            cessql();
         }
         public static void cesmysql()
         {
@@ -174,7 +174,7 @@ namespace DataSync
                     Console.WriteLine("sqlserver query success");
                     log.Info("sqlserver query success");
                 }
-                sql = "insert into ces(code,cname)values(2,'测试')";
+                sql = "insert into ces(id,name)values(2,'测试')";
                 int result = MsSqlHelper.ExcuteSQL(sql);
                 if (result > 0)
                 {
